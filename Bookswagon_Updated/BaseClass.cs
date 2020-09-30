@@ -13,7 +13,7 @@ namespace Bookswagon_Updated
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.AddArgument("-start-maximized");
             driver = new ChromeDriver(chromeOptions);
-            driver.Url = "https://bookswagon.com";
+            driver.Url = "https://bookswagon.com/login";
         }
     }
 }

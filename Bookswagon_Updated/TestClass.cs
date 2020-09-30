@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Bookswagon_Updated.DoActions;
+using NUnit.Framework;
 
 namespace Bookswagon_Updated
 {
@@ -6,9 +7,9 @@ namespace Bookswagon_Updated
     public class TestClass : BaseClass
     {     
         [Test]
-        public void Test1()
+        public void LoginTest()
         {
-
+            DoAction.Login(driver);
         }
         [OneTimeTearDown]
         public void CloseUp()
