@@ -12,5 +12,11 @@ namespace Bookswagon_Updated.DoActions
             page.password.SendKeys("jocky1234#");
             page.loginbutton.Click();
         }
+
+        public static void SearchBook(IWebDriver driver)
+        {
+            HomePage page = new HomePage(driver);
+            page.searchbar.SendKeys("Harry Potter" + Keys.ArrowDown + Keys.Enter);
+        }
     }
 }
