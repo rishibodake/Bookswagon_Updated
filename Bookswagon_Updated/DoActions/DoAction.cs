@@ -29,7 +29,7 @@ namespace Bookswagon_Updated.DoActions
             Thread.Sleep(10000);
             driver.SwitchTo().Frame(page.myframe);
             page.placeorder.Click();
-            Thread.Sleep(10000);
+            Thread.Sleep(5000);
             CartPage.continueTo.Click();
         }
 
