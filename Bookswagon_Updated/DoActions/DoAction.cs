@@ -23,11 +23,15 @@ namespace Bookswagon_Updated.DoActions
         public static void SelectBook(IWebDriver driver)
         {
             SearchResult page = new SearchResult(driver);
+            ShoppingCart CartPage = new ShoppingCart(driver);
             page.book.Click();
             page.buynow.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(10000);
             driver.SwitchTo().Frame(page.myframe);
             page.placeorder.Click();
+            Thread.Sleep(10000);
+            CartPage.continueTo.Click();
         }
+       
     }
 }
