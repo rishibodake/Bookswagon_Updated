@@ -32,6 +32,19 @@ namespace Bookswagon_Updated.DoActions
             Thread.Sleep(10000);
             CartPage.continueTo.Click();
         }
+
+        public static void Address(IWebDriver driver)
+        {
+            ShippingAddress page = new ShippingAddress(driver);
+            page.name.SendKeys("Rishikesh");
+            page.streetaddress.SendKeys("Karad Road");
+            page.state.Click();
+            page.MH.Click();
+            page.city.SendKeys("Vita");
+            page.pincode.SendKeys("415311");
+            page.mobile.SendKeys("2525252525");
+            page.saveandcontinue.Click();
+        }
        
     }
 }

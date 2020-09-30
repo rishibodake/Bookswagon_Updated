@@ -24,6 +24,12 @@ namespace Bookswagon_Updated
         {
             DoAction.SelectBook(driver);
         }
+
+        [Test,Order(3)]
+        public void Addresstest()
+        {
+            DoAction.Address(driver);
+        }
         [OneTimeTearDown]
         public void CloseUp()
         {
