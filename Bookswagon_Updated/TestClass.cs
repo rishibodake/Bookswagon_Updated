@@ -18,6 +18,12 @@ namespace Bookswagon_Updated
         {
             DoAction.SearchBook(driver);
         }
+
+        [Test,Order(2)]
+        public void SelectBook_Test()
+        {
+            DoAction.SelectBook(driver);
+        }
         [OneTimeTearDown]
         public void CloseUp()
         {

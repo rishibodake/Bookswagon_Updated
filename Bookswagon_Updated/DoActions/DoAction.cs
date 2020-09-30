@@ -1,5 +1,6 @@
 ﻿using Bookswagon_Updated.Pages;
 using OpenQA.Selenium;
+using System.Threading;
 
 namespace Bookswagon_Updated.DoActions
 {
@@ -17,6 +18,16 @@ namespace Bookswagon_Updated.DoActions
         {
             HomePage page = new HomePage(driver);
             page.searchbar.SendKeys("Harry Potter" + Keys.ArrowDown + Keys.Enter);
+        }
+
+        public static void SelectBook(IWebDriver driver)
+        {
+            SearchResult page = new SearchResult(driver);
+            page.book.Click();
+            page.buynow.Click();
+            Thread.Sleep(5000);
+            driver.SwitchTo().Frame(page.myframe);
+            page.placeorder.Click();
         }
     }
 }
