@@ -11,8 +11,8 @@ namespace Bookswagon_Updated
         public void Initialise()
         {
             ChromeOptions chromeOptions = new ChromeOptions();
-          //chromeOptions.AddArgument("-start-maximized");
-            chromeOptions.AddArgument("headless");
+          chromeOptions.AddArgument("-start-maximized");
+          //  chromeOptions.AddArgument("headless");
             driver = new ChromeDriver(chromeOptions);
             driver.Url = "https://bookswagon.com/login";
         }

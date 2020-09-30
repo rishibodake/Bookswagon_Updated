@@ -45,6 +45,12 @@ namespace Bookswagon_Updated.DoActions
             page.mobile.SendKeys("2525252525");
             page.saveandcontinue.Click();
         }
+
+        public static void FinalView(IWebDriver driver)
+        {
+            FinalView page = new FinalView(driver);
+            page.save.Click();
+        }
        
     }
 }

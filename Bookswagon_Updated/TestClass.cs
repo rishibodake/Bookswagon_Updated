@@ -30,6 +30,12 @@ namespace Bookswagon_Updated
         {
             DoAction.Address(driver); 
         }
+
+        [Test,Order(4)]
+        public void FinalView()
+        {
+            DoAction.FinalView(driver);
+        }
         [OneTimeTearDown]
         public void CloseUp()
         {
